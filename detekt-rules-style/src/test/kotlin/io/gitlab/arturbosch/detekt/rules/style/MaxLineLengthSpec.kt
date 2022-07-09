@@ -69,12 +69,12 @@ class MaxLineLengthSpec {
     @Nested
     inner class `a kt file with a long package name and long import statements` {
         val code = """
-        package anIncrediblyLongAndComplexPackageNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
+            package anIncrediblyLongAndComplexPackageNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
 
-        import anIncrediblyLongAndComplexImportNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
+            import anIncrediblyLongAndComplexImportNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
 
-        class Test {
-        }
+            class Test {
+            }
         """
 
         val file = compileContentForTest(code)
@@ -185,13 +185,13 @@ class MaxLineLengthSpec {
     @Nested
     inner class `a kt file with a long package name, long import statements and a long line` {
         val code = """
-        package anIncrediblyLongAndComplexPackageNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
+            package anIncrediblyLongAndComplexPackageNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
 
-        import anIncrediblyLongAndComplexImportNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
+            import anIncrediblyLongAndComplexImportNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot
 
-        class Test {
-            fun anIncrediblyLongAndComplexMethodNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot() {}
-        }
+            class Test {
+                fun anIncrediblyLongAndComplexMethodNameThatProbablyShouldBeMuchShorterButForTheSakeOfTheTestItsNot() {}
+            }
         """.trimIndent()
 
         val file = compileContentForTest(code)

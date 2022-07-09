@@ -187,8 +187,8 @@ class YamlConfigSpec {
             assertThatCode {
                 yamlConfigFromContent(
                     """
-                    map:
-                          {}map
+                        map:
+                              {}map
                     """.trimIndent()
                 )
             }.isInstanceOf(Config.InvalidConfigurationError::class.java)
